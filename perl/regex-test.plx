@@ -1,0 +1,11 @@
+#!/usr/bin/perl
+while (<>) {                   # take one input line at a time
+	chomp;
+	if (/(\b\w*a\b)/) {
+	#if (/match/) {
+		print "Matched: |$`<$&>$'|\n";  # the special match vars
+		print "\$1 contains $1\n";
+	} else {
+		print "No match: |$_|\n";
+	}
+}
